@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="/static/amaze_ui/i/favicon.ico">
+    {load href="/static/amaze_ui/css/amazeui.min.css" /}
+    {load href="/static/amaze_ui/css/app.css" /}
+    {load href="/static/css/size.css"}
+    {load href="/static/css/animate.css"}
+    <title>沙漠小驿</title>
+    <style>
+        #m1, #m4 {
+            animation: tinLeftIn 1s 0s 1 normal both
+        }
+
+        #m2 {
+            animation: tinUpIn 1s 1s 1 both
+        }
+
+        #m3 {
+            animation: tinRightIn 1s 3s 1 both
+        }
+
+        #m5 {
+            animation: BounceSlideLeft 1s 2s 1 both
+        }
+
+        .rotate {
+            animation: rotate 1.5s 0s normal both
+        }
+
+        .h {
+            height: 240px;
+            line-height: 240px
+        }
+    </style>
+</head>
+<body>
+<!-- 侧边栏内容 -->
+<div id="doc-oc-demo2" class="am-offcanvas">
+    <div class="am-offcanvas-bar">
+        <div class="am-offcanvas-content">
+            <p class="am-text-center am-text-middle">
+                <img class="am-img-thumbnail am-circle" src="/static/amaze_ui/i/logo.jpg"/>
+            </p>
+            <hr data-am-widget="divider" style="" class="am-divider am-divider-dashed"/>
+            <p class="am-text-center am-text-middle">生活不止眼前的苟且</p>
+            <p class="am-text-center am-text-middle">还有诗和远方的田野</p>
+            <p class="am-text-center am-text-middle">你赤手空拳来到人世间</p>
+            <p class="am-text-center am-text-middle">为找到那片海不顾一切</p>
+            <hr data-am-widget="divider" style="" class="am-divider am-divider-dashed"/>
+            <p class="am-text-center am-text-middle">
+                <button type="button" class="am-btn am-btn-default"
+                        data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0, width: 400, height: 225}">
+                    登录管理
+                </button>
+            </p>
+            <footer data-am-widget="footer"
+                    class="am-footer"
+                    data-am-footer="{  }">
+                <div class="am-footer-miscs am-text-xs">
+                    <p>CopyRight©2018 JKC Inc.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<!--登录-->
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+    <div class="am-modal-dialog">
+        <form class="am-form">
+            <fieldset>
+                <legend>输入后台密码</legend>
+                <div class="am-form-group">
+                    <input type="password" class="" id="pwd" placeholder="请输入密码">
+                </div>
+                <div class="am-form-group">
+                    <button class="am-btn am-btn-primary">确认</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<!--主页面-->
+<div class="am-g am-g-fixed">
+    <div class="am-u-sm-12 height20">
+    </div>
+</div>
+<div class="am-g am-g fixed">
+    <div class="am-u-sm-4 am-u-md-6 am-u-lg-6">
+        <div id="m1" class="am-alert am-alert-primary h am-text-center am-text-middle">
+            栏目一
+        </div>
+    </div>
+    <div id="m2" class="am-u-sm-4 am-u-md-3 am-u-lg-3">
+        <div class="am-alert am-alert-success h am-text-center am-text-middle">
+            栏目二
+        </div>
+    </div>
+    <div id="m3" class="am-u-sm-4 am-u-md-3 am-u-lg-3">
+        <div class="am-alert am-alert-warning h am-text-center am-text-middle">
+            栏目三
+        </div>
+    </div>
+</div>
+
+<div class="am-g am-g fixed">
+    <div id="m4" class="am-u-sm-6 am-u-md-3 am-u-lg-3">
+        <div class="am-alert am-alert-success h am-text-center am-text-middle"
+             data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}">
+            展开>>
+        </div>
+    </div>
+    <div id="m5" class="am-u-sm-6 am-u-md-9 am-u-lg-9">
+        <div class="am-alert am-alert-primary h am-text-center am-text-middle">
+            栏目四
+        </div>
+    </div>
+</div>
+</body>
+{load href="/static/amaze_ui/js/jquery.min.js" /}
+{load href="/static/amaze_ui/js/amazeui.min.js" /}
+<script>
+    $('.am-img-thumbnail').hover(function () {
+        $(this).addClass('rotate')
+    }, function () {
+        $(this).removeClass('rotate');
+    })
+</script>
+</html>

@@ -16,7 +16,7 @@ class BaseController extends Controller
 
     /**
      * @desc 结果统一处理方法
-     * @param $data array 返回数据
+     * @param $data mixed 返回数据
      * @return \think\response\Json
      * @author kcjia
      * @time 2018/2/27
