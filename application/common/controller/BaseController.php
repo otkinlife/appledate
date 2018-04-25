@@ -23,16 +23,11 @@ class BaseController extends Controller
      */
     protected function returnR($data, $code = '')
     {
-        if (is_numeric($code)) {
-            $result['code'] = $code;
-        } else {
-            $result['code'] = $this->service->getRCode();
-        }
-
-        if ($result['code'] === E_OK) {
+        $result['code'] = $code;
+        if ($code === E_OK) {
             $result['data'] = $data;
         } else {
-            $result['message'] = $this->service->getRMessage();
+            $result['message'] = $data;
         }
         return json($result);
     }

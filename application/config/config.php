@@ -178,25 +178,8 @@ return [
 
     //session设置
     'session' => [
-        'id' => '',
-        // SESSION_ID的提交变量,解决flash上传跨域
-        'var_session_id' => '',
-
-        'expire' => 24 * 60 * 60,
-
-        //存储sid的cookie过期时间
-        //'cookie_lifetime' => 0,
-        // SESSION 前缀
-        'prefix' => 'think',
-        // 驱动方式 支持redis memcache memcached
-        'type' => 'redis',
-        // 是否自动开启 SESSION
-        'auto_start' => true,
-        'host' => 'r-bp189ef7bb357f54.redis.rds.aliyuncs.com',
-        // redis端口
-        'port' => 6379,
-        // 密码
-        'password' => '61a86fFE',
+        'type'           => '',
+        'auto_start'     => true,
     ],
 
     //cookie设置

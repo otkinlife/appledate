@@ -25,6 +25,13 @@ class ActionBeginBehavior
      */
     public function run()
     {
-
+        $isLogin = Session::get('login');
+        if (Request::instance()->module() === 'index') {
+            return true;
+        }
+        if (empty($isLogin)) {
+            echo json_encode(['code' => E_LOGIN, 'message' => '用户未登录']);
+            die;
+        }
     }
 }

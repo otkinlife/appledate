@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    {load href="/static/css/aui.css"}
+    {load href="/static/css/position.css"}
+    <title>沙漠小驿</title>
+</head>
+<body class="aui-content">
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-form-list">
+        <li class="aui-list-header">请先登录</li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-bar aui-bar-btn" style="width:60%;">
+                    <div id="jkc" class="aui-bar-btn-item aui-active">JKC</div>
+                    <div id="gy" class="aui-bar-btn-item">GY</div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    <div class="aui-col-xs-3">
+                        <i class="aui-iconfont aui-icon-lock">密码</i>
+                    </div>
+                </div>
+                <div class="aui-list-item-input">
+                    <input id="pwd" type="password" placeholder="Password">
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div id="submit" class="aui-bar bottom">
+        <div class="aui-hr"></div>
+        <div id="login" class="aui-btn aui-btn-primary aui-btn-outlined aui-btn-sm aui-margin-10">
+            <div class="aui-col-xs-3">
+                <i class="aui-iconfont aui-icon-paper"></i>
+            </div>
+            点击登录
+        </div>
+    </div>
+</div>
+</body>
+{load href="/static/js/jquery.min.js"}
+{load href="/static/js/aui-toast.js"}
+<script>
+    var toast = new auiToast();
+    $('#jkc').click(function () {
+        $(this).addClass('aui-active');
+        $('#gy').removeClass('aui-active');
+    });
+    $('#gy').click(function () {
+        $(this).addClass('aui-active');
+        $('#jkc').removeClass('aui-active');
+    });
+    $('#submit').click(function () {
+        var account = $('.aui-active').attr('id');
+        var pwd = $('#pwd').val();
+        $.ajax({
+            url: '/index/User/login',
+            dataType: 'json',
+            type: 'post',
+            data: {
+                'account': account,
+                'pwd': pwd
+            },
+            success: function (data) {
+                if (data.code === 0) {
+                    toast.loading({
+                        title:"登录成功",
+                        duration:2000
+                    },function(ret){
+                        console.log(ret);
+                        setTimeout(function(){
+                            toast.hide();
+                        }, 2000);
+                    });
+                    location.href="/index/index/index";
+                } else {
+                    toast.fail({
+                        title:"登录失败"
+                    });
+                }
+            },
+            error: function () {
+                alert('网络错误');
+            }
+        });
+    })
+</script>
+</html>
