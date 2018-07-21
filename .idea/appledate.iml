@@ -19,41 +19,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHP">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/elasticsearch/elasticsearch" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/ringphp" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/streams" />
-          <root url="file://$MODULE_DIR$/vendor/php-amqplib/php-amqplib" />
-          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
-          <root url="file://$MODULE_DIR$/vendor/phpoffice/phpspreadsheet" />
-          <root url="file://$MODULE_DIR$/vendor/psr/log" />
-          <root url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
-          <root url="file://$MODULE_DIR$/vendor/react/promise" />
-          <root url="file://$MODULE_DIR$/vendor/topthink/think-installer" />
-          <root url="file://$MODULE_DIR$/vendor/workerman/channel" />
-          <root url="file://$MODULE_DIR$/vendor/workerman/phpsocket.io" />
-          <root url="file://$MODULE_DIR$/vendor/workerman/workerman" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/elasticsearch/elasticsearch" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/ringphp" />
-          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/streams" />
-          <root url="file://$MODULE_DIR$/vendor/php-amqplib/php-amqplib" />
-          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
-          <root url="file://$MODULE_DIR$/vendor/phpoffice/phpspreadsheet" />
-          <root url="file://$MODULE_DIR$/vendor/psr/log" />
-          <root url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
-          <root url="file://$MODULE_DIR$/vendor/react/promise" />
-          <root url="file://$MODULE_DIR$/vendor/topthink/think-installer" />
-          <root url="file://$MODULE_DIR$/vendor/workerman/channel" />
-          <root url="file://$MODULE_DIR$/vendor/workerman/phpsocket.io" />
-          <root url="file://$MODULE_DIR$/vendor/workerman/workerman" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>

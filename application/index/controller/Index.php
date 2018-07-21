@@ -12,16 +12,12 @@ use think\Session;
 
 class Index extends BaseController
 {
-    public  function index()
+    public function index()
     {
-        $isLogin = Session::get('login');
-        if (empty($isLogin)) {
-            $this->redirect('index/login');
-        }
         return $this->fetch();
     }
 
-    public function login()
+    public function article()
     {
         return $this->fetch();
     }
